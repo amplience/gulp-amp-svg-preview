@@ -1,0 +1,19 @@
+{
+  "extends": "google",
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "globals": {
+    "module": true
+  },
+  "rules": {
+    "require-jsdoc": 0,
+    "max-len": ["error", 120],
+    "camelcase": ["error", {"properties": "never"}]
+  }
+}
