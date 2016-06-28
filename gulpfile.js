@@ -16,7 +16,7 @@ var gutil = require('gulp-util');
 // when they're loaded
 require('babel-core/register');
 
-gulp.task('static', function () {
+gulp.task('static', function() {
   return gulp.src('**/*.js')
     .pipe(excludeGitignore())
     .pipe(eslint())
@@ -24,11 +24,11 @@ gulp.task('static', function () {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('nsp', function (cb) {
+gulp.task('nsp', function(cb) {
   nsp({package: path.resolve('package.json')}, cb);
 });
 
-gulp.task('pre-test', function () {
+gulp.task('pre-test', function() {
   return gulp.src('src/**/*.js')
     .pipe(excludeGitignore())
     .pipe(istanbul({
@@ -38,27 +38,27 @@ gulp.task('pre-test', function () {
     .pipe(istanbul.hookRequire());
 });
 
-gulp.task('test', ['pre-test'], function (cb) {
+gulp.task('test', ['pre-test'], function(cb) {
   var mochaErr;
 
   gulp.src('test/**/*.js')
     .pipe(plumber())
     .pipe(mocha({reporter: 'spec'}))
-    .on('error', function (err) {
+    .on('error', function(err) {
       gutil.log(err);
       mochaErr = err;
     })
     .pipe(istanbul.writeReports())
-    .on('end', function () {
+    .on('end', function() {
       cb(mochaErr);
     });
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch(['src/**/*.js', 'test/**/*.js'], ['test']);
 });
 
-gulp.task('coveralls', ['test'], function () {
+gulp.task('coveralls', ['test'], function() {
   if (!process.env.CI) {
     return;
   }
@@ -67,13 +67,13 @@ gulp.task('coveralls', ['test'], function () {
     .pipe(coveralls());
 });
 
-gulp.task('babel', ['clean'], function () {
+gulp.task('babel', ['clean'], function() {
   return gulp.src('src/**/*.js')
     .pipe(babel())
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', function () {
+gulp.task('clean', function() {
   return del('dist');
 });
 
