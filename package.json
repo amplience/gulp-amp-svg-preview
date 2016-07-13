@@ -50,7 +50,7 @@
       "mocha": true
     }
   },
-  "repository": "amplience/gulp-amp-svg-preview",
+  "repository": "https://github.com/amplience/gulp-amp-svg-preview.git",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
