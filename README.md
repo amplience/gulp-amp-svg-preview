@@ -46,11 +46,12 @@ var previewOpts = {
   di: {
     protocol: 'https',
     host: 'i1.adis.ws',
-    companyName: 'testCompany123',
+    companyName: '<your_client_name_here>',
     namespace: 'preview'
   }
 }
 ```
+*Note: companyName is your Amplience company name*
 
 ## License
 
