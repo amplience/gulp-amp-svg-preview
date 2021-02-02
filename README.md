@@ -35,7 +35,7 @@ Default options:
 var previewOpts = {
   auth: {
     protocol: 'https',
-    host: 'auth.adis.ws',
+    host: 'auth.amplience.net',
     pathname: 'oauth/token'
   },
   preview: {
@@ -45,7 +45,7 @@ var previewOpts = {
   },
   di: {
     protocol: 'https',
-    host: 'i1.adis.ws',
+    host: 'classic.cdn.media.amplience.net',
     companyName: '<your_client_name_here>',
     namespace: 'preview'
   }
