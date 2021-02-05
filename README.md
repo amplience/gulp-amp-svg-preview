@@ -45,7 +45,7 @@ var previewOpts = {
   },
   di: {
     protocol: 'https',
-    host: 'classic.cdn.media.amplience.net',
+    host: 'cdn.media.amplience.net',
     companyName: '<your_client_name_here>',
     namespace: 'preview'
   }
