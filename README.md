@@ -40,7 +40,7 @@ var previewOpts = {
   },
   preview: {
     protocol: 'https',
-    host: 'dm-preview-service.adis.ws',
+    host: 'dm-preview.amplience.net',
     pathname: 'preview'
   },
   di: {
